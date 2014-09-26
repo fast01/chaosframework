@@ -264,7 +264,6 @@ int PosixStorageDriver::openBlock(const std::string& vfs_path, unsigned int flag
 		ofs = new boost_fs::fstream(_path, mode);
 		if(ofs->rdstate() & std::ifstream::failbit) {
 			delete(ofs);
-			(*data_block)->driver_private_data = NULL;
 			return -3;
 		}
 		
