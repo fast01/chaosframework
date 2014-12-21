@@ -62,7 +62,7 @@ namespace chaos {
         static const char * const   OPT_LOG_FILE                        = "log-file";
         //!  Specifi the level of the log going
         static const char * const   OPT_LOG_LEVEL                       = "log-level";
-        //!  Specify the ip where publish the framework
+        //!  Specify the ip for wich we need to publish ourself on mds
         static const char * const   OPT_PUBLISHING_IP                   = "publishing-ip";
         //!  Specify the ip where publish the framework
         static const char * const   OPT_DATA_IO_IMPL					= "data-io-impl";
@@ -621,13 +621,13 @@ namespace chaos {
             //!  for choice the implementation
             static const char * const   OPTION_KEY_EVENT_ADAPTER_IMPLEMENTATION     = "evt_adpt_impl";
             //! @Configuraiton for alert event multicast ip
-            static const char * const   CONF_EVENT_ALERT_MADDRESS                   = "239.255.0.1";
+            static const char * const   CONF_EVENT_ALERT_MADDRESS                   = "226.0.0.1";
             //! @Configuraiton for instruments event multicast ip
-            static const char * const   CONF_EVENT_INSTRUMENT_MADDRESS              = "239.255.0.2";
+            static const char * const   CONF_EVENT_INSTRUMENT_MADDRESS              = "226.0.0.2";
             //! @Configuraiton for command event multicast ip
-            static const char * const   CONF_EVENT_COMMAND_MADDRESS                 = "239.255.0.3";
+            static const char * const   CONF_EVENT_COMMAND_MADDRESS                 = "226.0.0.3";
             //! @Configuraiton for custom event multicast ip
-            static const char * const   CONF_EVENT_CUSTOM_MADDRESS                  = "239.255.0.4";
+            static const char * const   CONF_EVENT_CUSTOM_MADDRESS                  = "226.0.0.4";
             //! @Configuraiton for event multicast ip port
             static const unsigned short CONF_EVENT_PORT                             = 5000;
         }
