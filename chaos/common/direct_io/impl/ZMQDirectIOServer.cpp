@@ -47,15 +47,14 @@ void free_answer(void *data, void *hint) {
 	DIRECTIO_FREE_ANSWER_DATA(answer_data)
 }
 
-ZMQDirectIOServer::ZMQDirectIOServer(std::string alias):DirectIOServer(alias) {
-	zmq_context = NULL;
-	priority_socket = NULL;
-	service_socket = NULL;
-	run_server = false;
-};
+ZMQDirectIOServer::ZMQDirectIOServer(std::string alias):
+DirectIOServer(alias),
+zmq_context(NULL),
+priority_socket(NULL),
+service_socket(NULL),
+run_server(false) {};
 
-ZMQDirectIOServer::~ZMQDirectIOServer(){
-};
+ZMQDirectIOServer::~ZMQDirectIOServer(){};
 
 //! Initialize instance
 void ZMQDirectIOServer::init(void *init_data) throw(chaos::CException) {
@@ -103,10 +102,13 @@ void ZMQDirectIOServer::start() throw(chaos::CException) {
 void ZMQDirectIOServer::stop() throw(chaos::CException) {
     run_server = false;
 	
-	ZMQDIO_SRV_LAPP_ << "Deallocating zmq context";
-    zmq_ctx_shutdown(zmq_context);
-    zmq_ctx_term(zmq_context);
-    ZMQDIO_SRV_LAPP_ << "ZMQ Context deallocated";
+    if(zmq_context) {
+        ZMQDIO_SRV_LAPP_ << "Deallocating zmq context";
+        zmq_ctx_shutdown(zmq_context);
+        zmq_ctx_term(zmq_context);
+        zmq_context = NULL;
+        ZMQDIO_SRV_LAPP_ << "ZMQ Context deallocated";
+    }
 	
     //wiath all thread
 	ZMQDIO_SRV_LAPP_ << "Join on all thread";
