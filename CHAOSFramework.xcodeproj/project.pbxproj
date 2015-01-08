@@ -429,6 +429,8 @@
 		32C7EAD71A5D9E450008DFE8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32C7EAD61A5D9E450008DFE8 /* main.cpp */; };
 		32C7EADD1A5D9EE30008DFE8 /* ChaosWANProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32C7EADB1A5D9EE30008DFE8 /* ChaosWANProxy.cpp */; };
 		32C7EAE31A5EC1140008DFE8 /* AbstractMSDatabaseDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32C7EAE11A5EC1140008DFE8 /* AbstractMSDatabaseDriver.cpp */; };
+		32C7EAE71A5EC9980008DFE8 /* AbstractWANInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32C7EAE51A5EC9980008DFE8 /* AbstractWANInterface.cpp */; };
+		32C7EAEA1A5ECC990008DFE8 /* HTTPWANInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32C7EAE81A5ECC990008DFE8 /* HTTPWANInterface.cpp */; };
 		32CB736F16FE3432008575F0 /* ReaderDataService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32CB736D16FE3432008575F0 /* ReaderDataService.cpp */; };
 		32CB737016FE3432008575F0 /* ReaderDataService.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CB736E16FE3432008575F0 /* ReaderDataService.h */; };
 		32CB7CE017099C8D00767FC1 /* DataCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32CB7CDE17099C8D00767FC1 /* DataCache.cpp */; };
@@ -1018,6 +1020,10 @@
 		32C7EADF1A5E868C0008DFE8 /* UrlAccessibleService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UrlAccessibleService.h; sourceTree = "<group>"; };
 		32C7EAE11A5EC1140008DFE8 /* AbstractMSDatabaseDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractMSDatabaseDriver.cpp; sourceTree = "<group>"; };
 		32C7EAE21A5EC1140008DFE8 /* AbstractMSDatabaseDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractMSDatabaseDriver.h; sourceTree = "<group>"; };
+		32C7EAE51A5EC9980008DFE8 /* AbstractWANInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractWANInterface.cpp; sourceTree = "<group>"; };
+		32C7EAE61A5EC9980008DFE8 /* AbstractWANInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractWANInterface.h; sourceTree = "<group>"; };
+		32C7EAE81A5ECC990008DFE8 /* HTTPWANInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPWANInterface.cpp; sourceTree = "<group>"; };
+		32C7EAE91A5ECC990008DFE8 /* HTTPWANInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPWANInterface.h; sourceTree = "<group>"; };
 		32CB736D16FE3432008575F0 /* ReaderDataService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReaderDataService.cpp; sourceTree = "<group>"; };
 		32CB736E16FE3432008575F0 /* ReaderDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderDataService.h; sourceTree = "<group>"; };
 		32CB7CDE17099C8D00767FC1 /* DataCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataCache.cpp; sourceTree = "<group>"; };
@@ -2300,6 +2306,7 @@
 				32C7EAD61A5D9E450008DFE8 /* main.cpp */,
 				32C7EADB1A5D9EE30008DFE8 /* ChaosWANProxy.cpp */,
 				32C7EADC1A5D9EE30008DFE8 /* ChaosWANProxy.h */,
+				32C7EAE41A5EC9590008DFE8 /* wan_interface */,
 			);
 			path = ChaosWANProxy;
 			sourceTree = "<group>";
@@ -2311,6 +2318,17 @@
 				32C7EAE21A5EC1140008DFE8 /* AbstractMSDatabaseDriver.h */,
 			);
 			path = db;
+			sourceTree = "<group>";
+		};
+		32C7EAE41A5EC9590008DFE8 /* wan_interface */ = {
+			isa = PBXGroup;
+			children = (
+				32C7EAE51A5EC9980008DFE8 /* AbstractWANInterface.cpp */,
+				32C7EAE61A5EC9980008DFE8 /* AbstractWANInterface.h */,
+				32C7EAE81A5ECC990008DFE8 /* HTTPWANInterface.cpp */,
+				32C7EAE91A5ECC990008DFE8 /* HTTPWANInterface.h */,
+			);
+			path = wan_interface;
 			sourceTree = "<group>";
 		};
 		32CB737116FE40F9008575F0 /* cache */ = {
@@ -3141,6 +3159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32C7EAEA1A5ECC990008DFE8 /* HTTPWANInterface.cpp in Sources */,
+				32C7EAE71A5EC9980008DFE8 /* AbstractWANInterface.cpp in Sources */,
 				32C7EADD1A5D9EE30008DFE8 /* ChaosWANProxy.cpp in Sources */,
 				32C7EAD71A5D9E450008DFE8 /* main.cpp in Sources */,
 			);

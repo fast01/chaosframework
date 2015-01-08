@@ -20,7 +20,7 @@
 
 #ifndef CHAOSFramework_UrlAccessibleService_h
 #define CHAOSFramework_UrlAccessibleService_h
-
+#include<string>
 namespace chaos {
 	namespace common {
 		namespace utility {
